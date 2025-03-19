@@ -8,18 +8,18 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>To-Do List</h1>
-        </header>
-        
-        <form id="todo-form" class="todo-form">
-            <label>
-                <input type="text" id="text" name="text">
-            </label>
-                <button class="add" type="submit">Add</button>
-        </form>
-    
-        <ol id="todo-list" class="todo-list"></ol>
+        <section class="todo-app">
+            <h2>To-Do List <img src="icon.png" alt=""> </h2>
+            <div class="row">
+                <input type="text" id="input-box" placeholder="Add your text">
+                <button>Add</button>
+            </div>
+            <ul id="list-container">
+                <li>Task 1</li>
+                <li>Task 2</li>
+                <li>Task 3</li>
+            </ul>
+        </section>
     </div>
     <script src="script.js"></script>
 </body>
