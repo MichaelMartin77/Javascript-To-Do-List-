@@ -62,7 +62,6 @@ function saveTask() {
             text: taskText, 
             completed: isCompleted
         }; 
-
         tasks.push(taskObj); 
     }
 
