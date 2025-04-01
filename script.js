@@ -9,28 +9,15 @@ button.addEventListener("click", (e) => {
     if (inputBox.value.trim() === '') {
         return;
     }
-        const li = document.createElement("li"); 
-        li.textContent = inputBox.value; 
-        listContainer.appendChild(li); 
-        const span = document.createElement("span"); 
-        span.innerHTML = "\u00d7"; 
-        li.appendChild(span); 
-        saveTask();
-        inputBox.value = ''; 
-        
+    createTaskElement();
+    inputBox.value = '';   
 })
 
 // add keydown event so when a user clicks the "enter" key it creates the list item 
 inputBox.addEventListener("keydown", (event) => {
     if (event.key === "Enter") {
-        const li = document.createElement("li"); 
-        li.textContent = inputBox.value; 
-        listContainer.appendChild(li); 
-        const span = document.createElement("span"); 
-        span.innerHTML = "\u00d7"; 
-        li.appendChild(span); 
-        saveTask();
-        inputBox.value = ''; 
+    createTaskElement();
+    inputBox.value = ''; 
     }
 })
 
@@ -49,6 +36,16 @@ listContainer.addEventListener("click", (event) => {
         saveTask();
     }
 })
+
+function createTaskElement() {
+    const li = document.createElement("li"); 
+    li.textContent = inputBox.value; 
+    listContainer.appendChild(li); 
+    const span = document.createElement("span"); 
+    span.innerHTML = "\u00d7"; 
+    li.appendChild(span); 
+    saveTask();
+}
 
 function saveTask() {
     const tasks = []; 
@@ -86,5 +83,7 @@ function loadTasks() {
     
 }
 loadTasks(); 
+
+
 
 

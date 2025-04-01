@@ -27,7 +27,6 @@ The To-Do List App is a browser-based task tracker that allows users to add, com
 ## Future Improvements
 - Add a "Clear All" button to remove all tasks at once.
 - Add due dates or categories to tasks.
-- Refactor code to use a single `createTaskElement()` function for reuse.
 - Improve responsiveness and styling for mobile devices.
 - Add tests to ensure localStorage and event handlers behave as expected.
 
